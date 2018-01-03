@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+@keyframes scale {
+  from { transform: scale(0)}
+  to { transform: scale(1)}
+}
+.main-container {
+  position: relative;
+  display: block;
+  width: 300px;
+  max-width: 300px;
+  height: 300px;
+  max-height: 300px;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: 50px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.colors-btn {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+}
+
+.colors-btn div {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-position: center;
+  background-repeat:  no-repeat;
+}
+
+.active {
+  position: relative;
+  background-image: url("./check.svg");
+}
+
+.black {
+  background-color: black;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.mistyrose {
+  background-color: mistyrose;
+}
+
+.scale-container {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 75%;
+}
+
+.animation {
+  animation: scale .8s;
+}
