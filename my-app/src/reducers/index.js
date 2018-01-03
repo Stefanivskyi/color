@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import color from './color';
+import activeColor from './color';
 
 export default combineReducers({
-  color
+  activeColor
 })

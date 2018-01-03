@@ -1,7 +1,7 @@
 
 let initialState = [];
 
-export default function color ( state = initialState, action) {
+export default function activeColor ( state = initialState, action) {
 
   switch (action.type) {
 
