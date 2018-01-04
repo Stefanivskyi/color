@@ -1,38 +1,52 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import App from '../App';
+import '../App.css';
 
 class Button extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeColor: 'black'
+    };
+
+    this.changeColor = this.changeColor.bind(this)
+  }
+
   changeColor() {
-    console.log('color', this.color);
-    this.props.onChangeColor(this.color.value);
+
+    this.setState({
+      activeColor: this.color // activeColor: ?
+    });
+
+    let { color } = this.props;
+    console.log('color', color);
+    this.props.onChangeColor( color );
   }
 
   render() {
-    let {color, Active, onClick} = this.props;
+    let { color } = this.props;
+    let { activeColor } = this.state;
 
     return (
-
         <div
-            onClick={() => this.changeBackground(color)}
-            className={color + [Active === color ? ' active' : '']}
+            onClick={this.changeColor}
+            className={color + [activeColor === color ? ' active' : '']}
         />
-
     );
   }
 }
 
 Button.propTypes = {
   // props
-  color: PropTypes.array.isRequired
+  color: PropTypes.string.isRequired
 };
 
 
 export default connect(
     state => ({
-      color: state.color
+      activeColor: state.activeColor
     }),
     dispatch => ({
       onChangeColor: (color) => {

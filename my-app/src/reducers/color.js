@@ -1,5 +1,5 @@
 
-let initialState = [];
+let initialState = '';
 
 export default function activeColor ( state = initialState, action) {
 
@@ -8,10 +8,9 @@ export default function activeColor ( state = initialState, action) {
     case 'ACTIVE_COLOR':
       return {
         ...state,
-        color: action.payload
+        color: action.color
       };
     default:
       return state;
-
   }
 };
