@@ -17,7 +17,7 @@
   margin-left: -150px;
   margin-top: 50px;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -27,41 +27,33 @@
   margin-top: 20px;
 }
 
-.colors-btn div {
+.btn {
   display: inline-block;
   width: 42px;
   height: 42px;
   border-radius: 30px;
   margin: 0 5px;
   cursor: pointer;
-  background-position: center;
-  background-repeat:  no-repeat;
+}
+
+.cursor-default {
+  cursor: default;
 }
 
 .active {
   position: relative;
-  background-image: url("./check.svg");
+  background: url("./check.svg") center no-repeat;
 }
 
-.black {
-  background-color: black;
-}
+.black {background-color: black;}
 
-.orange {
-  background-color: orange;
-}
+.orange {background-color: orange;}
 
-.green {
-  background-color: green;
-}
+.green {background-color: green;}
 
-.yellow {
-  background-color: yellow;
-}
+.yellow {background-color: yellow;}
 
-.mistyrose {
-  background-color: mistyrose;
-}
+.mistyrose {background-color: mistyrose;}
 
 .scale-container {
   position: absolute;
@@ -73,5 +65,5 @@
 }
 
 .animation {
-  animation: scale .8s;
+  animation: scale .5s;
 }
