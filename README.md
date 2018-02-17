@@ -1,3 +1,4 @@
 - npm install
-- npm start.
+- npm start
+
 Used: React.js 
