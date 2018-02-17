@@ -1,4 +1,4 @@
 - npm install
 - npm start
 
-Used: React.js 
+Used: React.js / Redux
